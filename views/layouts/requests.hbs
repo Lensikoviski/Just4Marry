@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/request.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+</head>
+
+<body style="text-align:center;">
+
+    <h2 class="requests_head">Requests</h2>
+    <br>
+    <br>
+
+
+
+
+    <div class="req_container">
+        {{# each requested_users}}
+
+        <div class="card">
+
+            <div class="image">
+                <img src="/userimages/{{this._id}}.jpg" alt=""></td>
+            </div>
+
+
+            {{#ifiacceptedornot ../requests_id_array this._id}}
+
+            <div class="details">
+
+
+
+                {{#if accepted}}
+                <p>{{../this.name}}</p>
+                <p>{{../this.age}} years</p>
+                <p>{{../this.religion}}</p>
+                <p>Education: {{../this.Education}}</p>
+                {{else}}
+
+                <p>{{../this.name}}</p>
+                <p>{{../this.age}} years</p>
+                <p>{{../this.religion}}</p>
+                <p>Education: {{../this.Education}}</p>
+
+                {{/if}}
+
+
+            </div>
+
+
+
+            {{#if accept}}
+            <div class="buttons">
+                <form action="/declinerequest" id="declinerequest" method="post">
+                    <input type="hidden" name="requested_id" id="" value="{{../this._id}}">
+                    <button
+                        onclick="changetextdecline('{{../this._id}}','{{../this._id}}decline')"
+                        id="{{../this._id}}decline" type="submit">Decline</button></td>
+                </form>
+
+                <form action="/acceptrequest" method="post" id="acceptrequest" >
+                <input type="hidden" name="requested_id" value="{{../this._id}}">
+                 <button
+                    onclick="makedeclineinvisible('{{../this._id}}decline' , '{{../this._id}}')"
+                    id="{{../this._id}}" type="submit"> Accept</button></td>
+                </form>
+
+               
+            </div>
+            {{/if}}
+
+
+            {{#if accepted}}
+            <div class="status">
+                <p>accepted</p>
+                <img src="images/accepted.png" alt="">
+            </div>
+            {{/if}}
+
+            {{/ifiacceptedornot}}
+
+
+
+
+
+        </div>
+
+
+        {{/each}}
+
+    </div>
+
+
+
+
+    <h2 class="myintrests_head">My intrests</h2>
+
+
+
+    <div class="myintrests">
+
+
+        {{# each intrested_users}}
+
+        <div class="card">
+            <div class="image">
+                <img src="userimages/{{this._id}}.jpg" alt="">
+            </div>
+
+
+
+            {{#ifheacceptedornot ../myintrestsid_id_array this._id}}
+
+
+            {{#if accepted}}
+            <div class="details">
+                <p><a href="/viewprofile/{{../this._id}}">{{../this.name}}</a></p>
+                <p>{{../this.age}} years</p>
+                <p>{{../this.religion}}</p>
+                <p>Education: {{../this.Education}}</p>
+            </div>
+            <div class="status">
+                <p>accepted</p>
+                <img src="images/accepted.png" alt="">
+            </div>
+
+
+            {{/if}}
+
+            {{#if declined}}
+            <div class="details">
+                <p>{{../this.name}}</p>
+                <p>{{../this.age}} years</p>
+                <p>{{../this.religion}}</p>
+                <p>Education: {{../this.Education}}</p>
+            </div>
+
+            <div class="declined">
+                <p>Rejected</p>
+                <img src="images/closed.png" alt="">
+            </div>
+
+
+            {{/if}}
+
+            {{#if accept}}
+
+            <div class="intrestsend">
+                <p>Intrest send</p>
+                <img src="images/upload.png" alt="">
+            </div>
+
+
+
+            {{/if}}
+
+
+            {{/ifheacceptedornot}}
+
+        </div>
+
+        {{/each}}
+
+    </div>
+
+
+
+
+
+
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+
+    function changetextdecline(id, id1) {
+        document.getElementById(id).style.display = 'none'
+        document.getElementById(id1).innerHTML = 'declined'
+    }
+
+    function makedeclineinvisible(id, id1) {
+        document.getElementById(id).style.display = 'none'
+        document.getElementById(id1).innerHTML = 'accepted'
+
+    }
+
+    function acceptrequest(id) {
+        //  console.log(id)
+        $.ajax({
+            url: '/acceptrequest',
+            data: {
+                requested_id: id
+            },
+            method: 'post'
+        })
+    }
+
+
+    function declinerequest(id) {
+        $.ajax({
+            url: '/declinerequest',
+            data: {
+                requested_id: id
+            },
+            method: 'post'
+        })
+    }
+
+        document.getElementById('acceptrequest').onsubmit(function(e){
+                e.preventDefault()
+            })
+
+            document.getElementById('declinerequest').onsubmit(function(e){
+                e.preventDefault()
+            })
+
+</script>
+
+</html>

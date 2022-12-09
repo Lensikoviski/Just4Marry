@@ -1,0 +1,277 @@
+.container{
+    width: 80%;
+    margin: 50px auto;
+    font-weight: bolder;
+}
+.contactbox{
+    \\background: #fff;
+    display: flex;
+    height: 2%;
+}
+.leftp{
+    flex-basis: 60%;
+    padding: 60px 40px;
+    \\background-color: aqua;
+}
+.rightp{
+    flex-basis: 60%;
+    padding: 60px 40px;
+    background-color: white;
+    color: rgb(175, 213, 25);
+    margin-left: -10%;
+    border-radius: 50px;
+}
+.inputs16 :hover{
+    background-color:wheat;
+    cursor: pointer;
+    border: none;
+}
+.inputs1 {
+   
+   
+    color:  #222;
+    display: block;
+    width: 70%;
+    padding: 1em;
+   
+    margin-bottom: 0.5em;
+   
+}
+.inputs2 {
+   
+    
+     color:  #222;
+     display: block;
+     width: 70%;
+     padding: 1em;
+    
+     margin-bottom: 0.5em;
+    
+ }
+ .inputs3 {
+   
+    
+     color:  #222;
+     display: block;
+     width: 70%;
+     padding: 1em;
+    
+     margin-bottom: 0.5em;
+    
+ }
+ .inputs4 {
+   
+    
+     color:  #222;
+     display: block;
+     width: 70%;
+     padding: 1em;
+    
+     margin-bottom: 0.5em;
+
+ }
+ .inputs5 {
+   
+    
+     color:  #222;
+     display: block;
+     width: 70%;
+     padding: 1em;
+    
+     margin-bottom: 0.5em;
+    
+ }
+ .inputs6 {
+   
+    
+     color:  #222;
+     display: block;
+     width: 70%;
+     padding: 1em;
+    
+     margin-bottom: 0.5em;
+    
+ }
+ .inputs7 {
+   
+    
+     color:  #222;
+     display: block;
+     width: 70%;
+     padding: 1em;
+    
+     margin-bottom: 0.5em;
+    
+ }
+ .inputs8 {
+   
+    
+     color:  #222;
+     display: block;
+     width: 70%;
+     padding: 1em;
+    
+     margin-bottom: 0.5em;
+    
+ }
+ .inputs9 {
+   
+    
+     color:  #222;
+     display: block;
+     width: 70%;
+     padding: 1em;
+    
+     margin-bottom: 0.5em;
+    
+ }
+ .inputs10 {
+   
+    
+     color:  #222;
+     display: block;
+     width: 70%;
+     padding: 1em;
+
+     margin-bottom: 0.5em;
+    
+ }
+ .inputs11 {
+   
+    
+     color:  #222;
+     display: block;
+     width: 70%;
+     padding: 1em;
+
+     margin-bottom: 0.5em;
+    
+ }
+ .inputs12 {
+   
+    
+     color:  #222;
+     display: block;
+     width: 70%;
+     padding: 1em;
+    
+     margin-bottom: 0.5em;
+    
+ }
+ .inputs13 {
+   
+     color:  #222;
+     display: block;
+     width: 70%;
+     padding: 1em;
+    
+     margin-bottom: 0.5em;
+    
+ }
+ .inputs14 {
+   
+    
+     color:  #222;
+     display: block;
+     width: 70%;
+     padding: 1em;
+    
+     margin-bottom: 0.5em;
+    
+ }
+ .inputs15 {
+   
+    
+     color: #222;
+     display: block;
+     width: 70%;
+     padding: 1em;
+    
+     margin-bottom: 0.5em;
+    
+ }
+ .inputs16 {
+   
+    
+     color:  #222;
+     display: block;
+     width: 70%;
+     padding: 1em;
+    
+     margin-bottom: 0.5em;
+    
+ }
+ form input[type="text"]{
+    width: 387px;
+    padding: 20px 10px;
+    margin: 10px 0px;
+    outline: none;
+    border: none;
+    background: rgb(222, 208, 208);
+    border-radius: 8px;
+}
+select {
+    width: 387px;
+    padding: 15px 10px;
+    margin: 10px 0px;
+    outline: none;
+    border: none;
+    background: rgb(222, 208, 208);
+    border-radius: 8px;
+}
+form input[type="number"]{
+    width: 387px;
+    padding: 20px 10px;
+    margin: 10px 0px;
+    outline: none;
+    border: none;
+    background: rgb(222, 208, 208);
+    border-radius: 8px;
+}
+body{
+    background-image: url("/images/logpic2.jpg"),linear-gradient(rgba(129, 129, 129, 0.096),rgba(0,0,0,5));
+    opacity: 0.9;
+}
+.container{
+    \\background-color: #fff;
+    
+}
+
+.fafa-heart :nth-last-child(){
+    background-color: #fff;
+    font-size: xx-large;
+}
+.heading{
+    text-decoration-color: orangered;
+}
+.logo{
+    font-weight: bolder;
+    color:rgb(226, 96, 60);
+    background: -moz-linear-gradient(black);
+    font-size: 60px;
+    text-decoration:wavy;
+}
+.heading{
+    font-size: x-large;
+}
+.inputs17{
+    margin-top: 50%;
+}
+.selectfile{
+    margin-top: 50%;
+    font-size: xx-large;
+}
+.img{
+    font-size: x-large;
+}
+.usericon{
+    cursor: pointer;
+    font-size:100px;
+    margin-top: 35%;
+    color: white;
+    \\margin-bottom: 35%;
+    
+}
+.usericon :hover{
+
+}

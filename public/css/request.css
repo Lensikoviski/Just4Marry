@@ -1,0 +1,128 @@
+.req_container{
+    display:flex;
+    flex-direction:row;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.card{
+    background-color: #04e4b98c;
+    border-radius: 10px;
+    width: 220px;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .image{
+    padding-top: 15px;
+}
+
+.card .image img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.card .details{
+    margin-top: 15px;
+}
+
+.card .details p{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.card .details a{
+    text-decoration: none;
+}
+
+.card .status{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background: #fcc024;
+    width: 65%;
+    border-radius: 18px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    font-weight: 800;
+}
+
+.card .status p{
+    color:black;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.card .buttons{
+    margin: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.card .buttons button:first-child{
+    width: 34%;
+    background: #ff0000c7;
+    border-radius: 5px;
+    color: white;
+    border-color: #ff0000c7;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.card .buttons button:nth-child(2){
+    width: 34%; 
+    background: #07bf0d;
+    border-radius: 5px;
+    color: white;
+    border-color: #07bf0d;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.myintrests{
+    display:flex;
+    flex-direction:row;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.card .intrestsend{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background: #9cd1c8;
+    width: 65%;
+    color: #000000;
+    border-radius: 18px;
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: 800;
+}
+
+.card .declined{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background: #f89a9a;
+    width: 65%;
+    color: #ff0000;
+    border-radius: 18px;
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: 800;
+}
+
+
+.requests_head,.myintrests_head{
+    margin: 34px 0px;
+    font-family: system-ui;
+}
+
+
+

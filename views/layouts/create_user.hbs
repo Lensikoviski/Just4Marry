@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <title>
+           login
+        </title>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/css/create_user.css"> 
+    </head>
+    
+        
+    <body>
+        <div class="container">
+            <div class="logo">
+            <i class="fa fa-heart" style="font-size: xx-larger;">choose life long companionship</i>
+            </div>
+            <div class="heading">
+            <h1 style="color:rgb(83, 242, 239);">CREATE YOUR PROFILE.....</h1>
+            </div>
+            <form method="post" action="/createuser" enctype="multipart/form-data">
+            <div class="contactbox">
+                <div class="leftp">
+                   <div class="img">
+                    <img src="" alt="" id="currentimg" style="width: 191px;height: 247px;"><br>
+                    <input type="file" name="Image" id="imgupload"  onchange="viewImage(event)">
+                   </div>
+                 
+
+        <div class="inputs17">
+            <label>About Me</label>
+            <br>
+            <textarea name="about" cols="20" rows="3">{{partial_data.about}}</textarea>
+        </div>
+
+                </div>
+                <div class="rightp">
+                    <h4>personal Info</h4>
+                    <p>{{Error}}</p>
+                   
+                        <div class="inputs1">
+                            <label>Name</label>
+                            <input type="text" name="name" value="{{partial_data.name}}">
+                        </div>
+                        <div class="inputs2">
+                            <label>Age</label>
+                            <input type="number" name="age" value="{{partial_data.age}}">
+                        </div>
+                        <div class="inputs15">
+                            <label>Sex</label>
+                            <select name="sex">
+                                <option value="">Choose</option>
+                                <option value="Male" id="Male">Male</option>
+                                <option value="Female" id="Female">Female</option>
+                            </select>
+                            <script>
+                                  const sex =  document.getElementById("{{partial_data.sex}}")
+                                  sex.selected="selected"
+                            </script>
+                        </div>
+                        <div class="inputs3">
+                            <label>Marital Status</label>
+                            <select name="martialstatus">
+                                <option value="">Choose</option>
+                                <option value="Unmarried" id="Unmarried">Unmarried</option>
+                                <option value="Divorced" id="Divorced">Divorced</option>
+                            </select>
+                             <script>
+                                   const martialstatus = document.getElementById("{{partial_data.martialstatus}}")
+                                   martialstatus.selected="selected"
+                            </script>
+                        </div>
+                        <div class="inputs4">
+                            <label>Religion</label>
+                            <select name="religion">
+                                <option value="">Please select</option>
+                                <option value="Hindu" id="Hindu">Hindu</option>
+                                <option value="Christian" id="Christian">Christian</option>
+                                <option value="Islam" id="Islam">Islam</option>
+                                <option value="Sikh" id="Sikh">Sikh</option>
+                            </select>
+                            <script>
+                                   const religion = document.getElementById("{{partial_data.religion}}")
+                                   religion.selected="selected"
+                            </script>
+                        </div>
+                        <div class="inputs5">
+                            <label>father's Name</label>
+                            <input type="text" name="fathersname" value="{{partial_data.fathersname}}">
+                        </div>
+                        <div class="inputs6">
+                            <label>Mother's Name</label>
+                            <input type="text" name="mothersname" value="{{partial_data.mothersname}}">
+                        </div>
+                        <div class="inputs7">
+                            <label>Occupation</label>
+                            <input type="text" name="occupation" value="{{partial_data.occupation}}">
+                        </div>
+                        <div class="inputs8">
+                            <label>
+                                Education
+                            </label>
+                            <select name="Education">
+                                <option value="">Please select</option>
+                                <option value="10th" id="10th">10th</option>
+                                <option value="+2" id="+2">+2</option>
+                                <option value="UG" id="UG">UG</option>
+                                <option value="PG" id="PG">PG</option>
+                                <option value="PHD" id="PHD">PHD</option>
+                                <option value="Diploma" id="Diploma">Diploma</option>
+                                <option value="ITI" id="ITI">ITI</option>
+                            </select>
+                            <script>    
+                                const edu =  document.getElementById("{{partial_data.Education}}")
+                                edu.selected="selected"
+                            </script>
+                        </div>
+                        <div class="inputs9">
+                            <label>Annual Income</label>
+                            <input type="number" name="income" value="{{partial_data.income}}">
+                        </div>
+                        <div class="inputs10">
+                            <label>Height</label>
+                            <input type="number" name="height" value="{{partial_data.height}}">
+                        </div>
+                        <div class="inputs11">
+                            <label>Weight</label>
+                            <input type="number" name="weight" value="{{partial_data.weight}}">
+                        </div>
+                        <div class="inputs12">
+                            <label>Body type</label>
+                            <select name="bodytype">
+                                <option value="">Please select</option>
+                                <option value="Athletic" id="Athletic">Athletic</option>
+                                <option value="Average" id="Average">Average</option>
+                                <option value="Heavy" id="Heavy">Heavy</option>
+                                <option value="Slim" id="Slim">Slim</option>
+                            </select>
+                            <script>
+                                   const bodytype = document.getElementById("{{partial_data.bodytype}}")
+                                   bodytype.selected="selected"
+                            </script>
+                        </div>
+                        <div class="inputs13">
+                            <label>Complexion</label>
+                            <select name="complexion">
+                                <option value="">Please select</option>
+                                <option value="very-fair" id="very-fair">Very fair</option>
+                                <option value="fair" id="fair">Fair</option>
+                                <option value="Wheatish" id="Wheatish">Wheatish</option>
+                                <option value="medium" id="medium">medium</option>
+                                <option value="dark" id="dark">dark</option>
+                            </select>
+                            <script>
+                                   const complexion = document.getElementById("{{partial_data.complexion}}")
+                                   complexion.selected="selected"
+                            </script>
+                        </div>
+                        <div class="inputs14">
+                            <label>Famity Status</label>
+                            <select name="familystatus">
+                                <option value="">Please select</option>
+                                <option value="lower-income" id="lower-income">Lower income</option>
+                                <option value="middle-class" id="middle-class">Middle class</option>
+                                <option value="upper-middle" id="upper-middle">Upper middle class</option>
+                                <option value="rich">Rich</option>
+                            </select>
+                            <script>
+                                 const familystatus = document.getElementById("{{partial_data.familystatus}}")
+                                 familystatus.selected="selected"
+                            </script>
+
+                        </div>
+                        <div class="class15">
+                              <label for="">Living in</label>
+                              <input type="text" name="livingin" id="" value="{{partial_data.livingin}}"><br><br>
+                        </div>
+                        <div class="inputs15">
+                            <label>Family Type</label>
+                            <select name="familytype">
+                                <option value="">Please select</option>
+                                <option value="joint-family" id="joint-family">Joint Family</option>
+                                <option value="nuclear-family" id="nuclear-family">Nuclear Family</option>
+                            </select>
+                            <script>       
+                                const familytype = document.getElementById("{{partial_data.familytype}}")
+                                familytype.selected="selected"
+                            </script>
+                        </div>
+
+                        <div class="input15">
+                           <h4>Contact</h4><br>
+                            <label for="">Phonenumber</label>
+                            <input type="text" name="phone" class="inputs1" id="" value="{{partial_data.phone}}"><br>
+                            <label for="">Address</label><br>
+                            <input type="text" name="address" class="inputs1" id="" value="{{partial_data.address}}">
+                        </div>
+
+                       
+                        
+                        <div class="inputs16">
+                            <button input="button">Create Profile</button>
+                        </div>
+
+                        <input type="hidden" name="loginid" value="{{loginid}}" id="">
+
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        
+        <script>
+            function viewImage(event){
+               document.getElementById("currentimg").src=URL.createObjectURL(event.target.files[0])
+            }
+                
+        </script>
+
+
+    </body>
+</html>

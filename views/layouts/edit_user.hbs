@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" style="text-align:center;">
+
+
+        <form method="post" action="" enctype="multipart/form-data">
+            <img src="/userimages/{{imagename}}.jpg" alt="" id="currentimg" style="width: 191px;height: 247px;"><br>
+            <input type="file" name="Image" id="imgupload" src="/userimages/{{imagename}}.jpg"
+                onchange="viewImage(event)">
+            <br>
+            <label for="">Upload Image</label><br><br>
+
+            {{Error}} <br><br>
+
+            <label>Name</label>
+            <input type="text" name="name" id="name" value="{{currdata.name}}"><br><br>
+            <label for="">Age</label>
+            <input type="text" name="age" id="" value="{{currdata.age}}"><br><br>
+
+                            <label>Sex</label>
+                            <select name="sex">
+                                <option value="">Choose</option>
+                                <option value="Male" id="Male">Male</option>
+                                <option value="Female" id="Female">Female</option>
+                            </select>
+                            <script>
+                                  const sex =  document.getElementById("{{currdata.sex}}")
+                                  sex.selected="selected"
+                            </script>
+
+            <label for="">Fathers name</label>
+            <input type="text" name="fathersname" id="" value="{{currdata.fathersname}}"><br><br>
+            <label for="">Mothers name</label>
+            <input type="text" name="mothersname" id="" value="{{currdata.mothersname}}"><br><br>
+
+                            <label>Marital Status</label>
+                            <select name="martialstatus">
+                                <option value="">Choose</option>
+                                <option value="Unmarried" id="Unmarried">Unmarried</option>
+                                <option value="Divorced" id="Divorced">Divorced</option>
+                            </select>
+                            <script>
+                                   const martialstatus = document.getElementById("{{currdata.martialstatus}}")
+                                   martialstatus.selected="selected"
+                            </script>
+
+
+                            <label>Religion</label>
+                            <select name="religion">
+                                <option value="">Please select</option>
+                                <option value="Hindu" id="Hindu">Hindu</option>
+                                <option value="Christian" id="Christian">Christian</option>
+                                <option value="Islam" id="Islam">Islam</option>
+                                <option value="Sikh" id="Sikh">Sikh</option>
+                            </select>
+                             <script>
+                                   const religion = document.getElementById("{{currdata.religion}}")
+                                   religion.selected="selected"
+                            </script>
+
+            <label for="">Education</label>
+            <select name="Education"><br><br>
+                  <option value="">Please select</option>
+                                <option value="10th" id="10th">10th</option>
+                                <option value="+2" id="+2">+2</option>
+                                <option value="UG" id="UG">UG</option>
+                                <option value="PG" id="PG">PG</option>
+                                <option value="PHD" id="PHD">PHD</option>
+                                <option value="Diploma" id="Diploma">Diploma</option>
+                                <option value="ITI" id="ITI">ITI</option>
+            </select><br><br>
+            <script>
+                const edu =  document.getElementById("{{currdata.Education}}")
+                edu.selected="selected"
+            </script>
+
+             <label>Annual Income</label>
+             <input type="number" name="income" value="{{currdata.income}}">
+
+             <br><br>
+
+
+               <label>Weight</label>
+               <input type="number" name="weight" value="{{currdata.weight}}">
+   
+            <label for="">Family type</label>
+            <select name="familytype">
+                <option value="">Please select</option>
+                <option value="joint-family" id="joint-family">Joint-family</option>
+                <option value="nuclear-family" id="nuclear-family">Nuclear-family</option>
+            </select><br><br>
+                            <script>       
+                                const familytype = document.getElementById("{{currdata.familytype}}")
+                                familytype.selected="selected"
+                            </script>
+
+            <label for="">Family Status</label>
+            <select name="familystatus" id="" value="{{currdata.family-status}}">
+                <option value="">Please select</option>
+                <option value="lower-income" id="lower-income">lower-income</option>
+                <option value="middle-class" id="middle-class">Middle class</option>
+                <option value="upper-middle" id="upper-middle">Upper middle class</option>
+                <option value="rich" id="rich">Rich</option>
+            </select><br><br>
+                            <script>
+                                 const familystatus = document.getElementById("{{currdata.familystatus}}")
+                                 familystatus.selected="selected"
+                            </script>
+
+            <label for="">Living in</label>
+            <input type="text" name="livingin" id="" value="{{currdata.livingin}}"><br><br>
+            <label for="">Height in cm</label>
+            <input type="number" name="height" id="" value="{{currdata.height}}"><br><br>
+
+            <label>Body-type</label>
+            <select name="bodytype" id="">
+                <option value="">Please select</option>
+                <option value="Athletic" id="Athletic">Athletic</option>
+                <option value="Average" id="Average">Average</option>
+                <option value="Heavy" id="Heavy">Heavy</option>
+                <option value="Slim" id="Slim">Slim</option>
+            </select><br><br>
+                            <script>
+                                   const bodytype = document.getElementById("{{currdata.bodytype}}")
+                                   bodytype.selected="selected"
+                            </script>
+
+               <label>Occupation</label>
+                            <input type="text" name="occupation" value="{{currdata.occupation}}">
+
+            <label for="">complexion</label>
+            <select name="complexion" id="">
+                <option value="">Please select</option>
+                <option value="very-fair" id="very-fair">Very fair</option>
+                <option value="fair" id="fair">Fair</option>
+                <option value="Wheatish" id="Wheatish">Wheatish</option>
+                <option value="medium" id="medium">medium</option>
+                <option value="dark" id="dark">dark</option>
+            </select><br><br>
+                            <script>
+                                   const complexion = document.getElementById("{{currdata.complexion}}")
+                                   complexion.selected="selected"
+                            </script>
+
+            <label for="">About me</label><br>
+            <textarea name="about" id="" cols="30" rows="5">{{currdata.about}}</textarea><br><br><br>
+
+           
+ 
+            <br><br>
+
+             <h4>Contact</h4><br>
+                            <label for="">Phonenumber</label>
+                            <input type="text" name="phone" id="" value="{{currdata.phone}}"><br>
+                            <label for="">Address</label><br>
+                            <input type="text" name="address" id="" value="{{currdata.address}}">
+            <input type="hidden" name="loginid" id="" value={{loginid}}>
+
+             <button type="submit">Update profile</button>
+        </form>
+    </div>
+</body>
+
+<script>
+    function viewImage(event) {
+        document.getElementById("currentimg").src = URL.createObjectURL(event.target.files[0])
+    }
+
+</script>
+
+</html>

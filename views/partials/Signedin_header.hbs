@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/Signedin_header.css">
+</head>
+<body>
+    <div class='signedin-header-container'>
+
+      <div class="logo">
+        <img src="/images/gift-box.png" alt="" />
+        <h1>Just 4 Marry</h1>
+        <img src="/images/kiss (2).png" class='kiss' alt="" />
+      </div>
+
+      <div class="navlinks">
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/filter">Filter</a></li>
+            <li><a href="/requests">Requests</a></li>
+            {{#if loggedin}}
+
+            <li onclick={toggleropdown()}>
+                <p>{{username}}</p>
+                <img src="/images/account.png" alt="">
+                <div class="dropdown" id="dropdown">
+                    <ul>
+                       <li><a href="/myaccount">Profile</a></li>
+                       <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            {{else}}
+
+            <li>
+                <a href="/">
+                    <p>login</p>
+                </a>
+            </li>
+
+
+            {{/if}}
+        </ul>
+      </div>
+    
+    
+      <div class="mobile-navbar">
+        <img src="/images/more.png" alt="" onclick={movesidebar()}>
+        <div class="mobile-dropdown" id="mobile-dropdown">
+            <ul>
+                <li><a href="/myaccount">
+                     <p>Jayaram</p>
+                     <img src="images/free_icon_1.svg" alt="">
+                </a></li>
+
+                <li><a href="/requests">Requests</a></li>
+
+                <li><a href="/logout">Logout</a></li>
+
+                <li><a href="/filter">Filter</a></li>
+            </ul>
+        </div>
+      </div>
+
+    </div>
+    <script>
+        
+        function movesidebar(){
+            let mobile_dropdown = document.getElementById("mobile-dropdown")
+             console.log(mobile_dropdown.classList)
+            if(mobile_dropdown.classList.contains("mobile-dropdown-open")){
+                mobile_dropdown.classList.add("mobile-dropdown-close")
+                mobile_dropdown.style.width="270px"
+                mobile_dropdown.classList.remove("mobile-dropdown-open")   
+            }else{
+                mobile_dropdown.classList.remove("mobile-dropdown-close")
+                  mobile_dropdown.style.width="0px"
+                mobile_dropdown.classList.add("mobile-dropdown-open")
+            }
+        }
+
+        function toggleropdown(){
+            let dropdown = document.getElementById("dropdown")
+            dropdown.classList.toggle("toggleclass")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.signedin-header-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 4, 196, 0.788);
+    height: 75px;
+}
+
+.signedin-header-container .logo{
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: left;
+
+}
+
+.signedin-header-container .logo img{
+    width: 50px;
+    height: 50px;
+}
+
+.signedin-header-container .logo h1{
+    color:midnightblue;
+    font-family: 'Courgette';
+    font-size: 40px;
+    margin-left: 40px;
+}
+
+.kiss{
+    rotate: -48deg;
+    width: 45px;
+    height: 45px;
+    margin-left: -16px;
+}
+
+.signedin-header-container .navlinks{
+    display: flex;
+    align-items: center;
+    width: 34%;
+    justify-content: right;
+}
+
+@media (max-width:1000px) {
+    .signedin-header-container .navlinks{
+        width: 42%;
+    }
+}
+
+
+
+.signedin-header-container .navlinks ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.signedin-header-container .navlinks ul li{
+    list-style: none;
+}
+
+.signedin-header-container .navlinks ul li a{
+    text-decoration: none;
+}
+
+.signedin-header-container .navlinks ul li:nth-child(3){
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.signedin-header-container .navlinks ul li:nth-child(3) img{
+    width: 40px;
+    margin-left: 10px;
+}
+
+.signedin-header-container .navlinks ul li a,.signedin-header-container .navlinks ul li p{
+    text-decoration: none;
+    font-size: 21px;
+    color: indigo;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.dropdown{
+    display: none;
+}
+
+.dropdown ul{
+    position: absolute;
+    left: 0;
+    top: 56px;
+    display:flex;
+    flex-direction: column;
+    background-color:#ff39d0;;
+    height: 110px;
+}
+
+
+
+.dropdown ul li:first-child a::after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: midnightblue;
+    display: inline-block;
+    margin-top: 22px;
+}
+
+.toggleclass{
+    display: flex;
+}
+
+.mobile-navbar{
+    display: none;
+}
+
+
+
+.mobile-dropdown{
+    position: absolute;
+    top: 75px;
+    right:0px;
+    width:0px;
+    background: #da0a3be3;
+    height: 350px;
+    overflow: hidden;
+}
+
+.mobile-dropdown-open{
+    animation: open 0.2s linear forwards;
+}
+
+.mobile-dropdown-close{
+    animation: close 0.2s linear forwards;
+}
+
+@-webkit-keyframes open{
+    100%{
+        width: 270px;
+    }
+}
+
+@-webkit-keyframes close{
+    100%{
+        width:0px;
+    }
+}
+
+@media (max-width:600px) {
+    .mobile-dropdown{
+        top: 65px;
+    }
+}
+
+.mobile-dropdown ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.mobile-dropdown ul li{
+    list-style: none;
+    width: 100%;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.mobile-dropdown ul li::after{
+    content: '';
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.648);
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+}
+
+.mobile-dropdown ul li:last-child::after{
+    display: none;
+}
+
+
+.mobile-dropdown ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    padding-left: 30px;
+}
+
+.mobile-dropdown ul li:first-child a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mobile-dropdown ul li:first-child img{
+    width: 35px;
+    margin-left: 20px;
+}
+
+@media (max-width:800px) {
+    .signedin-header-container .navlinks{
+        display: none;
+    }
+    .mobile-navbar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1%;
+    }
+    .mobile-navbar img{
+        width: 40px;
+    }
+}
+
+@media (max-width:600px) {
+    .mobile-navbar img{
+        width: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+@media (max-width:600px) {
+    .signedin-header-container{
+        height: 65px;
+        display: grid;
+        grid-template-columns: 1fr 0.2fr;
+
+    }
+    .signedin-header-container .logo{
+        margin-left: 5px;
+        display: flex;
+        justify-content: left;
+    }
+    .signedin-header-container .logo img{
+        width: 30px;
+        height: 30px;
+    }
+    .signedin-header-container .logo h1{
+        font-size: 25px;
+        margin-left: 10px;
+    }
+    .kiss{
+        margin-left: -9px;
+    }
+
+}
+
+@media (max-width:430px) {
+    .signedin-header-container .logo h1{
+        font-size: 25px;
+        margin-left: 10px;
+    }
+
+ 
+}
+

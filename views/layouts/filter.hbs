@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align:center">
+        
+         <form action="/filter" method="post">
+        <p>Age between</p>
+        <input type="number" name="lowerage" id="">
+        <p>and</p>
+        <input type="number" name="higherage" id="">
+        <br><br>
+
+
+                            <label>Sex</label>
+                            <select name="sex">
+                                <option value="choose">Choose</option>
+                                <option value="Male" id="Male">Male</option>
+                                <option value="Female" id="Female">Female</option>
+                            </select>
+
+                            <br><br>
+
+                            <label>Marital Status</label>
+                            <select name="martialstatus">
+                                <option value="choose">Choose</option>
+                                <option value="Unmarried" id="Unmarried">Unmarried</option>
+                                <option value="Divorced" id="Divorced">Divorced</option>
+                            </select><br><br>
+
+                             <label>Religion</label>
+                            <select name="religion">
+                                <option value="choose">Please select</option>
+                                <option value="Hindu" id="Hindu">Hindu</option>
+                                <option value="Christian" id="Christian">Christian</option>
+                                <option value="Islam" id="Islam">Islam</option>
+                                <option value="Sikh" id="Sikh">Sikh</option>
+                            </select>
+
+                
+        <label for="">Education</label>
+        <select name="Education" ><br><br>
+              <option value="choose">Please select</option>
+                                <option value="10th" id="10th">10th</option>
+                                <option value="+2" id="+2">+2</option>
+                                <option value="UG" id="UG">UG</option>
+                                <option value="PG" id="PG">PG</option>
+                                <option value="PHD" id="PHD">PHD</option>
+                                <option value="Diploma" id="Diploma">Diploma</option>
+                                <option value="ITI" id="ITI">ITI</option>
+        </select><br><br>
+
+      
+
+        
+
+
+        <label for="">complexion</label>
+        <select name="complexion" id="" >
+            <option value="please select">Please select</option>
+            <option value="very-fair" id="very-fair">Very fair</option>
+            <option value="fair" id="fair">Fair</option>
+            <option value="Wheatish" id="Wheatish">Wheatish</option>
+            <option value="medium" id="medium">medium</option>
+            <option value="dark" id="dark">dark</option>
+        </select><br><br>
+
+        <button type="submit">Filter profiles</button>
+
+    </div>
+   
+        
+    </form>
+</body>
+</html>

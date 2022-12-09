@@ -1,0 +1,90 @@
+.hero-container{
+    display: grid;
+    grid-template-columns: 0.75fr 1fr;
+}
+
+
+.text{
+    display: flex;
+    flex-direction: column;
+    padding: 53px;
+    color:rgb(255, 255, 255);
+    background-color: #ff3939db;
+}
+
+.text h1{
+    font-size: 50px;
+    font-family: 'Quicksand', sans-serif;
+    color:white;
+    margin: 0px;
+}
+
+.text p{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color:white;
+    margin-top: 60px;
+}
+
+.text .author_name{
+    margin-top: 0px;
+   
+}
+
+.getstarted{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.text button{
+    color: white;
+    background: #ff39d0;
+    border: none;
+    width: 166px;
+    height: 55px;
+    font-size: 20px;
+    transition: 0.1s;
+    border-radius: 10px;
+}
+
+.text button:hover{
+    background: rebeccapurple;
+}
+
+.couples_sitting img{
+   height: 100%;
+}
+
+
+@media (max-width:1000px) {
+    .hero-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: fit-content;
+    }
+ 
+}
+
+@media (max-width:600px) {
+    .text{
+        padding: 16px 21px;
+    }
+
+    .text h1{
+        font-size: 42px;
+    }
+    .text p{
+        font-size: 18px;
+    }
+}
+
+@media (max-width:350px) {
+    .text button{
+        width: 130px;
+        height: 43px;
+    }
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    h1,
+    h3 {
+        text-align: center;
+    }
+
+    button {
+        width: 56px;
+        height: 40px;
+    }
+</style>
+
+<body>
+    <h1>Welcome to Just4marry</h1>
+
+    <br><br>
+    <form action="/search" method="post" style="text-align:center;">
+        <input type="text" name="search_name" id="" placeholder="search profiles">
+        <button type="submit">search</button>
+    </form>
+    <br><br>
+
+
+    {{#if filter}}
+    <br><br>
+    <h3>filterd profiles</h3>
+
+        {{#each data}}
+
+        {{#check this.intrested ../curr_user_id}}
+
+
+        {{#if viewprofile}}
+            <a href="/viewprofile/{{../this._id}}">
+                <button>View profile</button>
+            </a>
+        {{/if}}
+
+        {{#if intrestsend}}
+            <button>Intrest send</button>
+        {{/if}}
+
+        
+           {{#if iamintrested}}
+            <form action="/sendintrest" method="post" id="sendintrest">
+                    <input type="hidden" name="loginid" id="" value="{{../../loginid}}">
+                    <input type="hidden" name="request_to" value="{{../this._id}}">
+                   <button  class="intrestbtn" type="submit">I am intrested</button>
+            </form>
+         
+            {{/if}}
+        
+
+        {{/check}}
+
+        <div class="cards" style="display: flex;width: 50%;justify-content: space-evenly;}">
+        <img src="userimages/{{this._id}}.jpg" style="width: 191px;height: 247px;" alt="">
+          {{this.name}} <br>
+            {{this.age}} <br> 
+            {{this.Education}} <br>
+            {{this.religion}} <br>
+            {{this.martialstatus}} <br>
+            {{this.occupation}} <br> 
+        <br>
+        <br>
+        </div>
+
+        {{/each}}
+    {{/if}}
+
+
+    {{#if searched_data}}
+
+    {{log "curr_userid is" curr_user_id}}
+
+    {{#check searched_data.intrested curr_user_id}}
+
+    {{#if viewprofile}}
+    <a href="/viewprofile/{{../searched_data._id}}">
+        <button>View profile</button>
+    </a>
+    {{/if}}
+
+    {{#if intrestsend}}
+    <button>Intrest send</button>
+    {{/if}}
+
+    {{#unless ../sameuser}}
+           {{#if iamintrested}}
+             <form action="/sendintrest" method="post" id="sendintrest">
+                    <input type="hidden" name="loginid" id="" value="{{../../loginid}}">
+                    <input type="hidden" name="request_to" value="{{../this._id}}">
+                   <button  class="intrestbtn" type="submit">I am intrested</button>
+            </form>
+         
+            {{/if}}
+    {{/unless}}
+
+    {{#if ../sameuser}}
+            <a href="/viewprofile/{{../searched_data._id}}">
+                <button>View profile</button>
+            </a>
+    {{/if}}
+
+
+    {{/check}}
+
+
+    <div class="cards" style="display: flex;width: 50%;justify-content: space-evenly;}">
+        <img src="userimages/{{searched_data._id}}.jpg" style="width: 191px;height: 247px;" alt="">
+         {{searched_data.name}} <br>
+            {{searched_data.age}} <br> 
+            {{searched_data.Education}} <br>
+            {{searched_data.religion}} <br>
+            {{searched_data.martialstatus}} <br>
+            {{searched_data.occupation}} <br> 
+        <br>
+        <br>
+    </div>
+
+    {{/if}}
+
+ 
+
+    {{#if notfind}}
+        <p>no results</p>
+    {{/if}}
+
+
+
+    <div class="container" style="display: flex;width: 100%;justify-content: space-around;margin-top: 50px;">
+
+        {{# each allusers}}
+
+        {{#check this.intrested ../curr_user_id}}
+        {{#if viewprofile}}
+        <a href="/viewprofile/{{../this._id}}">
+            <button>View profile</button>
+        </a>
+        {{/if}}
+
+        {{#if intrestsend}}
+        <button>Intrest send</button>
+        {{/if}}
+
+        {{#if iamintrested}}
+         <form action="/sendintrest" method="post" id="sendintrest">
+                    <input type="hidden" name="loginid" id="" value="{{../../loginid}}">
+                    <input type="hidden" name="request_to" value="{{../this._id}}">
+                   <button  class="intrestbtn" type="submit">I am intrested</button>
+            </form>
+         
+        {{/if}}
+
+
+        {{/check}}
+
+        <div class="cards" style="display: flex;width: 50%;justify-content: space-evenly;}">
+            <img src="userimages/{{this._id}}.jpg" alt="" style="width: 191px;height: 247px;"><br>
+            {{this.name}} <br>
+            {{this.age}} <br> 
+            {{this.Education}} <br>
+            {{this.religion}} <br>
+            {{this.martialstatus}} <br>
+            {{this.occupation}} <br> 
+           
+        </div>
+
+        {{/each}}
+
+        <script type="text/javascript">
+
+        
+            var RootUrl = '@Url.Content("~/")'
+
+            window.onload = function () {
+                var all_buttons = document.getElementsByClassName('intrestbtn');
+                console.log(all_buttons);
+                for (i = 0; i < all_buttons.length; i++) {
+                    all_buttons[i].addEventListener('click', function () {
+                        this.innerHTML = 'intrested';
+                    });
+                };
+            };
+
+            async function  sendintrest(id) {
+               
+            }
+
+            document.getElementById('sendintrest').onsubmit(function(e){
+                e.preventDefault()
+            })
+
+            //need to handle the form submission on the submit event, and return false preventing page refresh
+
+        </script>
+
+
+    </div>
+
+
+    
+
+</body>
+
+</html>

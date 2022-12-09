@@ -1,0 +1,194 @@
+.part1{
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: -1px 1px 9px 0px #00001061;
+    padding: 43px;
+}
+
+.part1 .image {
+    width: 70vh;
+    height: 80vh;
+}
+
+.part1 .image img{
+    width: 100%;
+    height: 100%;
+    border-width: 7px;
+    border-style: double;
+    border-color: #af5959;
+}
+
+.basicinfo h2:first-child{
+    font-size: 50px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    color: #911b1bba;
+}
+
+.basicinfo h2:nth-child(2){
+    font-size: 34px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    color: #00000099;
+
+}
+
+.basicinfo h2:nth-child(3){
+    font-size: 34px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    color: #00000099;
+}
+
+.basicinfo{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    
+}
+
+.personal-info h2:first-child{
+    font-size: 25px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    color: #00000099;
+    margin-top: 7px;
+}
+
+.personal-info{
+    margin-top: 70px;
+    width: 58%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: -1px 1px 9px 0px #00001061;
+}
+
+.personal-info .info{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-top: 10px;
+}
+
+.personal-info .info p{
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    color: #00000099;
+}
+
+.part2{
+    width: 90%;
+    margin: auto;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+}
+
+.myfamily{
+    box-shadow: -1px 1px 9px 0px #00001061;
+}
+
+
+
+.myfamily p{
+    font-size: 26px;
+    padding: 5px 0px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    color: #00000099;
+    margin-bottom: 20px;
+}
+
+.myfamily-info{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-left: 15%;
+}
+
+.myfamily .myfamily-info p{
+    font-size: 20px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    color: #00000099;
+    margin-bottom: 0px;
+}
+
+
+.myfamily .myfamily-info span{
+    margin: 0px 70px;
+}
+
+.physical-info{
+    box-shadow: -1px 1px 9px 0px #00001061;
+}
+
+.part3 .moreaboutme{
+    width: 90%;
+    margin: auto;
+    margin-top: 60px;
+    box-shadow: -1px 1px 9px 0px #00001061;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 25px;
+}
+
+.moreaboutme p:first-child{
+    font-size: 26px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    color: #00000099;
+    margin-bottom: 20px;
+}
+
+.moreaboutme p:nth-child(2){
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    color: #00000099;
+}
+
+.contact{
+    width: 90%;
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+    padding: 25px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contactinfo{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+
+.contact P{
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    color: #00000099;
+}
+
+.contact p:first-child{
+    font-size: 26px;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    color: #00000099;
+    margin-bottom: 20px;
+}
+
+.editbutton button{
+    width: 116px;
+    height: 37px;
+    outline: none;
+    background: #ff39d0;
+    border: none;
+    font-family: 'IBM Plex Sans Devanagari', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+

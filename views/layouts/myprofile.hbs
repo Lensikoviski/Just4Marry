@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/myprofile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Devanagari:wght@500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body style="text-align:center;">
+    <div class="container">
+        <div class="part1">
+            <div class="image">
+                <img src="/userimages/{{imagename}}.jpg" alt="">
+            </div>
+            <div class="basicinfo">
+                <h2>{{userdata.name}}</h2>
+                <h2>{{userdata.age}} years</h2>
+                <h2>{{userdata.religion}}</h2>
+                <div class="personal-info">
+                    <h2>Personal Information</h2>
+                    <div class="info">
+                        <p>Education --------------- {{userdata.Education}}</p>
+                        <p>Martial status ---------- {{userdata.martialstatus}}</p>
+                        <p>occupation -------------- {{userdata.occupation}}</p>
+                        <p>Living in---------------- {{userdata.livingin}}</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="part2">
+            <div class="myfamily">
+                <p>About my family</p>
+                <div class="myfamily-info">
+                    <p>Fathers name <span></span>&emsp; {{userdata.fathersname}}</p>
+                    <p>Mothers name <span></span> &emsp; {{userdata.mothersname}}</p>
+                    <p>Family status <span></span> &emsp; {{userdata.familytype}}</p>
+                    <p>Family type <span></span> &emsp; &nbsp; {{userdata.familystatus}}</p>
+                    <p>Income <span></span> &emsp;&emsp; &emsp;&nbsp;{{userdata.income}} </p>
+                </div>
+
+            </div>
+            <div class="myfamily">
+                <p>Physical Information</p>
+                <div class="myfamily-info">
+                    <p>Height <span></span> {{userdata.height}}</p>
+                    <p>Weight <span></span> {{userdata.weight}}</p>
+                    <p>Body Type <span></span>{{userdata.bodytype}}</p>
+                    <p>Complexion <span></span> {{userdata.complexion}}</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="part3">
+            <div class="moreaboutme">
+                <p>More about me...</p>
+                <p>{{userdata.about}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact">
+        <div class="contactinfo">
+            <p>Contact me through</p>
+            <p>phone:{{userdata.phone}}</p>
+            <p>address:{{userdata.address}}</p>
+        </div>
+
+
+        <div class="editbutton">
+            <a href="/edit/{{imagename}}">
+                <button>Update</button>
+            </a>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
